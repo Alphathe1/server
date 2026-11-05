@@ -1,6 +1,6 @@
 import type { Types } from "mongoose";
 import type { IWorkingHours, Role } from "./user.js";
-
+import type { Request } from "express";
 declare global {
   namespace Express {
     interface Request {
