@@ -4,6 +4,8 @@ import { StatusCodes } from "http-status-codes";
 import { errorResponse } from "../utils/responseFormatter.js";
 import { User } from "../models/user.model.js";
 import type { Role } from "../types/user.js";
+// Pulls in the `Request.user` augmentation so it is always part of the program.
+import "../types/express.js";
 
 interface AccessTokenPayload {
   id: string;
