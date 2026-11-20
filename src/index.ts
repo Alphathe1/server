@@ -15,9 +15,9 @@ import reviewsRouter from "./routes/reviews.routes.js";
 import notificationsRouter from "./routes/notifications.routes.js";
 import dashboardRouter from "./routes/dashboard.routes.js";
 import caisseRouter from "./routes/caisse.routes.js";
+import siteRouter from "./routes/site.routes.js";
 import { errorHandler, notFound } from "./middleware/error.middleware.js";
 import { startReminderJob } from "./jobs/reminders.js";
-
 const app = express();
 const PORT = Number(process.env.PORT) || 5000;
 
@@ -56,6 +56,7 @@ app.use("/reviews", reviewsRouter);
 app.use("/notifications", notificationsRouter);
 app.use("/dashboard", dashboardRouter);
 app.use("/caisse", caisseRouter);
+app.use("/site", siteRouter);
 
 app.use(notFound);
 app.use(errorHandler);

@@ -37,7 +37,11 @@ appointmentsRouter.post(
   validateBodySchema(createAppointmentSchema),
   createAppointment,
 );
-appointmentsRouter.get("/:id", validateParamsSchema(idParamSchema), getAppointment);
+appointmentsRouter.get(
+  "/:id",
+  validateParamsSchema(idParamSchema),
+  getAppointment,
+);
 appointmentsRouter.patch(
   "/:id",
   validateParamsSchema(idParamSchema),
